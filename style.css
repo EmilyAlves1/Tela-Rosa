@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+      background-color: var(--fundo-escuro);
+      font-family: 'Inter', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+    }
+
+
+
+    .about-section {
+      background-color: #120012;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .about-section img {
+      max-width: 300px;
+      border-radius: 12px;
+    }
+
+    .about-text {
+      max-width: 500px;
+    }
+
+    .about-text h2 {
+      color: var(--rosa-neon);
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+  .features {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+      background-image: url('Imagens/fundo-tela-rosa.png');
+    }
+
+    .feature-box {
+      background-color: #1c0c1c;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 250px;
+      text-align: center;
+      border: 1px solid var(--rosa-neon);
+    }
+
+    .feature-box h3 {
+      color: var(--rosa-claro);
+      margin-bottom: 1rem;
+    }
+
+    .feature-box p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+
+    .topics {
+      padding: 4rem 2rem;
+      background: #1a001f;
+      text-align: center;
+    }
+
+    .topics h2 {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .topics-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .topics-grid div {
+      width: 180px;
+      height: 180px;
+      background-color: #280028;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #888;
+      background-color: #0a0a0a;
+    }
