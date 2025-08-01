@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela Rosa - Comunidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa: #ff00a8;
+      --preto: #000000;
+      --cinza: #1a1a1a;
+      --branco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--preto);
+      color: var(--branco);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--preto);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo-flutuante {
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--rosa);
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 1rem auto 0;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .cta {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+        .cta a {
+        background-color: var(--rosa);
+        color: var(--preto);
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: 0.4s ease;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 0 transparent;
+        transform: translateY(0);
+        }
+
+        .cta a:hover {
+        background-color: #e60098;
+        transform: translateY(-6px);
+        filter: drop-shadow(0 0 12px #ff00a8);
+        }
+
+    section {
+      background: linear-gradient(to bottom, #000000, #640f47);
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--rosa);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .materiais {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 0 0 rgba(255, 0, 168, 0); /* sem sombra inicialmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+    .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 168, 0.4); /* brilho rosa atrás */
+    }
+
+    .card h3 {
+      color: var(--rosa);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: var(--cinza);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .cta a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Imagens/telarosaF.png" alt="logo-tela-rosa" class="logo-flutuante">
+    <p>Uma comunidade feita por e para mulheres que exploram, constroem e compartilham conhecimento em tecnologia e criatividade digital.</p>
+    <div class="cta">
+      <a href="https://chat.whatsapp.com/IDkbKKMChyZ3ymSOEmWHhu">Entrar para a Comunidade</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Materiais Disponíveis</h2>
+    <div class="materiais">
+      <div class="card">
+        <h3>Guia Front-end</h3>
+        <p>Um material introdutório para quem quer começar a programar interfaces web.</p>
+      </div>
+      <div class="card">
+        <h3>Checklist de Estudo</h3>
+        <p>Organize sua rotina de estudos com foco em tecnologia e design.</p>
+      </div>
+      <div class="card">
+        <h3>Templates Canva</h3>
+        <p>Modelos prontos para redes sociais, portfólios e muito mais.</p>
+      </div>
+      <div class="card">
+        <h3>Guia Front-end</h3>
+        <p>Um material introdutório para quem quer começar a programar interfaces web.</p>
+      </div>
+      <div class="card">
+        <h3>Checklist de Estudo</h3>
+        <p>Organize sua rotina de estudos com foco em tecnologia e design.</p>
+      </div>
+      <div class="card">
+        <h3>Templates Canva</h3>
+        <p>Modelos prontos para redes sociais, portfólios e muito mais.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tela Rosa. Todas os direitos reservados.</p>
+  </footer>
+</body>
+</html>
