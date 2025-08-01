@@ -172,27 +172,35 @@
         margin: 0 auto;
         }
 
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .cta a {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo-flutuante {
+            width: 120px;
+        }
+        }
+
         @media (max-width: 768px) {
         .logo-flutuante {
             width: 180px; /* tamanho médio para tablets */
         }
         }
 
+        @media (min-width: 769px) {
+        .logo-flutuante {
+            width: 800px; /* tamanho maior para telas grandes */
+        }
+        }
 
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .cta a {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-      }
 
-      .logo-flutuante {
-    width: 120px;
-  }
-    }
+    
 
   
   </style>
