@@ -163,6 +163,22 @@
       z-index: 1;
     }
 
+     .logo-flutuante {
+        width: 280px; /* tamanho grande para desktop */
+        max-width: 100%;
+        height: auto;
+        animation: flutuar 3s ease-in-out infinite;
+        display: block;
+        margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+        .logo-flutuante {
+            width: 180px; /* tamanho médio para tablets */
+        }
+        }
+
+
     @media (max-width: 500px) {
       header h1 {
         font-size: 2rem;
@@ -172,7 +188,13 @@
         width: 100%;
         text-align: center;
       }
+
+      .logo-flutuante {
+    width: 120px;
+  }
     }
+
+  
   </style>
 </head>
 <body>
