@@ -5,205 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tela Rosa - Comunidade</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --rosa: #ff00a8;
-      --roxo: #640f47;
-      --preto: #000000;
-      --cinza: #1a1a1a;
-      --branco: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-   body {
-    background: linear-gradient(to bottom, var(--preto), var(--roxo), var(--rosa));
-    color: var(--branco);
-    line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100vh;
-  }
-
-    /* Container do particles.js cobrindo toda a tela, fundo transparente */
-    #particles-js {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      z-index: 0; /* atrás do conteúdo */
-      background-color: transparent; /* fundo transparente para mostrar o gradiente do body */
-    }
-
-    /* Conteúdo da página fica acima do fundo */
-    main, header, section, footer, .cta, .card {
-      position: relative;
-      z-index: 1;
-    }
-
-    header {
-      background-color: transparent; /* deixa o gradiente aparecer */
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .logo-flutuante {
-      animation: flutuar 3s ease-in-out infinite;
-    }
-
-    @keyframes flutuar {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: var(--rosa);
-    }
-
-    header p {
-      max-width: 600px;
-      margin: 1rem auto 0;
-      font-size: 1.1rem;
-      color: #ccc;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-
-    .cta {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-    }
-
-    .cta a {
-      background-color: var(--rosa);
-      color: var(--preto);
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 100px;
-      transition: 0.4s ease;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 0 0 transparent;
-      transform: translateY(0);
-    }
-
-    .cta a:hover {
-      background-color: #e60098;
-      transform: translateY(-6px);
-      filter: drop-shadow(0 0 12px #ff00a8);
-    }
-
-    /* Seção com fundo transparente para deixar o gradiente aparecer */
-    section {
-      background: transparent;
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: #e48fc8dc;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .materiais {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background-color: rgba(17, 17, 17, 0.8); /* fundo escuro translúcido para contraste */
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 0 0 rgba(255, 0, 168, 0);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-      backdrop-filter: blur(6px); /* leve blur para efeito moderno */
-      -webkit-backdrop-filter: blur(6px);
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(255, 0, 168, 0.4);
-    }
-
-    .card h3 {
-      color: var(--rosa);
-      margin-bottom: 0.5rem;
-    }
-
-    footer {
-      background-color: var(--cinza);
-      text-align: center;
-      padding: 1rem;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
-      position: relative;
-      z-index: 1;
-    }
-
-     .logo-flutuante {
-        width: 280px; /* tamanho grande para desktop */
-        max-width: 100%;
-        height: auto;
-        animation: flutuar 3s ease-in-out infinite;
-        display: block;
-        margin: 0 auto;
-        }
-
-        @media (max-width: 500px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .cta a {
-                display: inline-block;
-                width: 100%;
-                text-align: center;
-            }
-
-            .logo-flutuante {
-            width: 120px;
-        }
-        }
-
-        @media (max-width: 768px) {
-        .logo-flutuante {
-            width: 180px; /* tamanho médio para tablets */
-        }
-        }
-
-        @media (min-width: 769px) {
-        .logo-flutuante {
-            width: 800px; /* tamanho maior para telas grandes */
-        }
-        }
-
-
-    
-
-  
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -222,27 +24,27 @@
     <h2>Materiais Disponíveis</h2>
     <div class="materiais">
       <div class="card">
-        <h3>Guia Front-end</h3>
+        <h3>Programação</h3>
         <p>Um material introdutório para quem quer começar a programar interfaces web.</p>
       </div>
       <div class="card">
-        <h3>Checklist de Estudo</h3>
+        <h3>Desenvolvimento web</h3>
         <p>Organize sua rotina de estudos com foco em tecnologia e design.</p>
       </div>
       <div class="card">
-        <h3>Templates Canva</h3>
+        <h3>Marketing</h3>
         <p>Modelos prontos para redes sociais, portfólios e muito mais.</p>
       </div>
       <div class="card">
-        <h3>Guia Front-end</h3>
+        <h3>Empreendedorismo digital</h3>
         <p>Um material introdutório para quem quer começar a programar interfaces web.</p>
       </div>
       <div class="card">
-        <h3>Checklist de Estudo</h3>
+        <h3>Motivacional</h3>
         <p>Organize sua rotina de estudos com foco em tecnologia e design.</p>
       </div>
       <div class="card">
-        <h3>Templates Canva</h3>
+        <h3>Organize seus estudos</h3>
         <p>Modelos prontos para redes sociais, portfólios e muito mais.</p>
       </div>
     </div>
