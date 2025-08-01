@@ -8,6 +8,7 @@
   <style>
     :root {
       --rosa: #ff00a8;
+      --roxo: #640f47;
       --preto: #000000;
       --cinza: #1a1a1a;
       --branco: #ffffff;
@@ -20,16 +21,16 @@
       font-family: 'Inter', sans-serif;
     }
 
-    body {
-      background-color: var(--preto);
-      color: var(--branco);
-      line-height: 1.6;
-      position: relative;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
+   body {
+    background: linear-gradient(to bottom, var(--preto), var(--roxo), var(--rosa));
+    color: var(--branco);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
 
-    /* Container do particles.js cobrindo toda a tela */
+    /* Container do particles.js cobrindo toda a tela, fundo transparente */
     #particles-js {
       position: fixed;
       width: 100vw;
@@ -37,7 +38,7 @@
       top: 0;
       left: 0;
       z-index: 0; /* atrás do conteúdo */
-      background-color: var(--preto); /* garante fundo preto */
+      background-color: transparent; /* fundo transparente para mostrar o gradiente do body */
     }
 
     /* Conteúdo da página fica acima do fundo */
@@ -47,7 +48,7 @@
     }
 
     header {
-      background-color: var(--preto);
+      background-color: transparent; /* deixa o gradiente aparecer */
       padding: 2rem;
       text-align: center;
     }
@@ -107,9 +108,9 @@
       filter: drop-shadow(0 0 12px #ff00a8);
     }
 
-    /* Alterei o background da section para combinar com partículas */
+    /* Seção com fundo transparente para deixar o gradiente aparecer */
     section {
-      background: linear-gradient(to bottom, #2a0033, #640f47);
+      background: transparent;
       padding: 3rem 1rem;
       max-width: 1000px;
       margin: 0 auto;
@@ -117,7 +118,7 @@
 
     section h2 {
       font-size: 2rem;
-      color: var(--rosa);
+      color: #e48fc8dc;
       margin-bottom: 1.5rem;
       text-align: center;
     }
@@ -129,7 +130,7 @@
     }
 
     .card {
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.8); /* fundo escuro translúcido para contraste */
       border-radius: 16px;
       padding: 24px;
       box-shadow: 0 0 0 rgba(255, 0, 168, 0);
@@ -137,6 +138,8 @@
       cursor: pointer;
       position: relative;
       z-index: 1;
+      backdrop-filter: blur(6px); /* leve blur para efeito moderno */
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .card:hover {
@@ -282,11 +285,11 @@
         "events": {
           "onhover": {
             "enable": true,
-            "mode": "grab"  // partículas interagem com o mouse
+            "mode": "grab"
           },
           "onclick": {
             "enable": true,
-            "mode": "push"  // adiciona partículas ao clicar
+            "mode": "push"
           },
           "resize": true
         },
