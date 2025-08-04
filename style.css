@@ -124,6 +124,16 @@
       gap: 1.5rem;
     }
 
+    .card a:hover{
+        text-decoration: none;
+  
+    }
+
+
+    .card a p{
+      color: var(--branco);
+    }
+
     .card {
       background-color: rgba(17, 17, 17, 0.8); /* fundo escuro translúcido para contraste */
       border-radius: 16px;
@@ -140,6 +150,7 @@
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(255, 0, 168, 0.4);
+      border: 1px solid var(--branco);
     }
 
     .card h3 {
@@ -152,10 +163,7 @@
         color: #ff00a8;
     }
 
-    .card a:hover{
-        text-decoration: underline;
-        color: #ffffff;
-    }
+    
 
     footer {
       background-color: var(--cinza);
