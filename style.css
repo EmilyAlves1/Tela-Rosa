@@ -150,8 +150,8 @@
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(255, 0, 168, 0.4);
-      border: 1px solid var(--branco);
     }
+
 
     .card h3 {
       color: var(--rosa);
